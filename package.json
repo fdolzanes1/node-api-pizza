@@ -8,16 +8,17 @@
     "build:dev": "tsc && node dist/app.js",
     "tsc:watch": "tsc --watch",
     "start": "ts-node-dev --transpile-only --ignore-watch node_modules src/app.ts",
-    "prettier:fix": "prettier --write \"**/*.*\"",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "prettier": "prettier --write \"**/*.*\"",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^4.4.0",
     "cors": "^2.8.5",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "prisma": "^4.4.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
