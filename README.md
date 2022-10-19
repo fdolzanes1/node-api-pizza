@@ -5,7 +5,7 @@ The goal of this project is to provide a modern and easy to use order management
 ## Features
 
 - [x] Configure database using ORM Prisma and Sqlite
-- [ ] CRUD users.
+- [x] CRUD users.
 - [ ] Log a user using JWT.
 - [ ] Verify authentication for private routes using Middlewares.
 - [ ] Show logged in user details.
@@ -32,7 +32,9 @@ The goal of this project is to provide a modern and easy to use order management
 **GET /users**
 
 Returns all users in the system.
+
 - Content
+
 ```
 {
   "users": [
@@ -50,6 +52,7 @@ Returns all users in the system.
 Creates a new User and returns the new object.
 
 - Data Body
+
 ```
 {
   "name": "Admin",
@@ -57,7 +60,9 @@ Creates a new User and returns the new object.
   "password": "123456"
 }
 ```
+
 - Content
+
 ```
 {
   "message": "User created successfully"

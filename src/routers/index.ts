@@ -1,6 +1,6 @@
 import { Express } from 'express-serve-static-core'
 import express from 'express'
-import userRoutes from './userRoutes'
+import userRoutes from './user.routes'
 import cors from 'cors'
 
 const router = (app: Express) => {
