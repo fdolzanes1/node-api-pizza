@@ -69,6 +69,33 @@ Creates a new User and returns the new object.
 }
 ```
 
+**PUT/users**
+
+Update a User and returns the updated object.
+
+- Params
+```
+/api/users/:email
+```
+
+- Data Body
+
+```
+{
+	"name": "Admin",
+	"password": "123456"
+}
+```
+
+- Content
+
+```
+{
+	"status": 200
+	"message": "User updated successfully"
+}
+```
+
 ## Run Locally
 
 Clone the project
