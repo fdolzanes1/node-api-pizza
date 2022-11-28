@@ -74,6 +74,7 @@ Creates a new User and returns the new object.
 Update a User and returns the updated object.
 
 - Params
+
 ```
 /api/users/:email
 ```
@@ -82,8 +83,8 @@ Update a User and returns the updated object.
 
 ```
 {
-	"name": "Admin",
-	"password": "123456"
+  "name": "Admin",
+  "password": "123456"
 }
 ```
 
@@ -91,8 +92,8 @@ Update a User and returns the updated object.
 
 ```
 {
-	"status": 200
-	"message": "User updated successfully"
+  "status": 200
+  "message": "User updated successfully"
 }
 ```
 
