@@ -7,8 +7,8 @@ export interface AuthData {
 
 export class Auth {
   static generateToken(email: string) {
-    const JWT_SECRET = 'node-pizza'
-    const token = jwt.sign({ email: email }, JWT_SECRET, {
+    const secret = process.env.JWT_SECRET
+    const token = jwt.sign({ email: email }, `${secret}`, {
       expiresIn: '1h',
     })
     return token
