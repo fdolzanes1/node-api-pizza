@@ -5,4 +5,5 @@ export interface CategoryData {
 export interface CategoryRequestRepository {
   create(data: CategoryData): Promise<void>
   findByName(name: string): Promise<CategoryData | null>
+  listAll(): Promise<CategoryData[]>
 }

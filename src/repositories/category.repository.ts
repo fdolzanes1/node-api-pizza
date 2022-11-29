@@ -20,6 +20,15 @@ class CategoryRepository implements CategoryRequestRepository {
       },
     })
   }
+
+  async listAll(): Promise<CategoryData[]> {
+    return await prisma.category.findMany({
+      select: {
+        id: true,
+        name: true,
+      },
+    })
+  }
 }
 
 export default CategoryRepository
