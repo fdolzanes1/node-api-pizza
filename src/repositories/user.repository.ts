@@ -40,7 +40,6 @@ class UserRepository implements UserRequestRepository {
         id: true,
         name: true,
         email: true,
-        password: true,
       },
     })
   }
