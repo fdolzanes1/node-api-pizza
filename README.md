@@ -6,8 +6,8 @@ The goal of this project is to provide a modern and easy to use order management
 
 - [x] Configure database using ORM Prisma and Sqlite
 - [x] CRUD users.
-- [ ] Log a user using JWT.
-- [ ] Verify authentication for private routes using Middlewares.
+- [x] Log a user using JWT.
+- [x] Verify authentication for private routes using Middlewares.
 - [ ] Show logged in user details.
 - [ ] Create new Categories and List Categories.
 - [ ] Create new Products and List Products from a specific category.
