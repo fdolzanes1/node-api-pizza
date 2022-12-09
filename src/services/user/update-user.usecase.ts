@@ -20,7 +20,7 @@ export class UpdateUser {
       throw Error(`Invalid Request: User not exist`)
     }
 
-    if (user && user.email != data.email) {
+    if (user && user.email === data.email) {
       throw Error(`Invalid Request: User ${data.email} already exist`)
     }
 

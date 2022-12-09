@@ -1,7 +1,6 @@
 import AuthValidateSchema from '../../helpers/auth.validate'
 import { AuthData, Auth } from '../../interfaces/auth.interface'
 import { UserRequestRepository } from '../../interfaces/user.interface'
-import bcrypt from 'bcryptjs'
 
 export class LoginAuth {
   constructor(private userRequestRepository: UserRequestRepository) {}
@@ -22,7 +21,7 @@ export class LoginAuth {
       throw Error(`Invalid Request: User ${email} not exist`)
     }
 
-    const validPassword = await bcrypt.compare(password, user.password)
+    const validPassword = await Auth.comparePassword(password, user.password)
 
     if (!validPassword) {
       throw Error(`Invalid Request: Invalid Email or Password`)

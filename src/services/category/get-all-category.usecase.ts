@@ -4,6 +4,12 @@ export class GetAllCategory {
   constructor(private categoryRequestRepository: CategoryRequestRepository) {}
 
   async execute() {
-    return await this.categoryRequestRepository.listAll()
+    const categories = await this.categoryRequestRepository.listAll()
+
+    if (!categories) {
+      throw Error(`Invalid Request: Categories not exist`)
+    }
+
+    return categories
   }
 }

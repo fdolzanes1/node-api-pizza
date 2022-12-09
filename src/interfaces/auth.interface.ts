@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken'
+import bcrypt from 'bcryptjs'
 
 export interface AuthData {
   email: string
@@ -12,5 +13,10 @@ export class Auth {
       expiresIn: '1h',
     })
     return token
+  }
+
+  static comparePassword(password: string, passwordDB: string) {
+    const valid = bcrypt.compare(password, passwordDB)
+    return valid
   }
 }
