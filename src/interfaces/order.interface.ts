@@ -16,4 +16,6 @@ export interface OrderDTO {
 export interface OrderRequestRepository {
   create(data: OrderData): Promise<void>
   listAll(): Promise<OrderDTO[] | null | undefined>
+  delete(id: string): Promise<void>
+  findById(id: string): Promise<OrderDTO | null>
 }

@@ -15,6 +15,22 @@ class OrderRepository implements OrderRequestRepository {
   async listAll(): Promise<OrderDTO[] | null | undefined> {
     return await prisma.order.findMany()
   }
+
+  async delete(id: string): Promise<void> {
+    await prisma.order.delete({
+      where: {
+        id: id,
+      },
+    })
+  }
+
+  async findById(id: string): Promise<OrderDTO | null> {
+    return await prisma.order.findFirst({
+      where: {
+        id,
+      },
+    })
+  }
 }
 
 export default OrderRepository

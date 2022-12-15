@@ -5,5 +5,6 @@ const router = Router()
 
 router.post('/orders', loginMiddleware.auth, orderController.create)
 router.get('/orders', orderController.listAll)
+router.delete('/orders/:id', orderController.delete)
 
 export default router
