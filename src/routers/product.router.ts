@@ -14,4 +14,7 @@ router.post(
   productController.create
 )
 
+router.get('/products/:category_id', productController.findByCategory)
+router.get('/products', productController.listAll)
+
 export default router

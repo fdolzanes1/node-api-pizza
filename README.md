@@ -8,10 +8,11 @@ The goal of this project is to provide a modern and easy to use order management
 - [x] CRUD users.
 - [x] Log a user using JWT.
 - [x] Verify authentication for private routes using Middlewares.
-- [ ] Show logged in user details.
-- [ ] Create new Categories and List Categories.
-- [ ] Create new Products and List Products from a specific category.
-- [ ] Upload product image using multer
+- [x] Show logged in user details.
+- [x] Create new Categories and List Categories.
+- [x] Create new Products and List Products from a specific category.
+- [x] List all products.
+- [x] Upload product image using multer
 - [ ] Open an order table and Close a table.
 - [ ] Add items to a table and also remove items.
 - [ ] Submit order and withdraw from draft.

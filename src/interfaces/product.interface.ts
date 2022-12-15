@@ -16,4 +16,6 @@ export interface ProductDTO {
 export interface ProductRequestRepository {
   create(data: ProductData): Promise<void>
   findByName(name: string): Promise<ProductDTO | null>
+  findByCategory(category_id: string): Promise<ProductDTO[] | null>
+  listAll(): Promise<ProductDTO[]>
 }
