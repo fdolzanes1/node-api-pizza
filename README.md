@@ -13,10 +13,10 @@ The goal of this project is to provide a modern and easy to use order management
 - [x] Create new Products and List Products from a specific category.
 - [x] List all products.
 - [x] Upload product image using multer
-- [ ] Open an order table and Close a table.
-- [ ] Add items to a table and also remove items.
+- [x] Open an order table and Close a table.
+- [x] Add items to a table and also remove items.
+- [x] List all orders.
 - [ ] Submit order and withdraw from draft.
-- [ ] List all orders.
 - [ ] Access all order details.
 - [ ] Complete order.
 
