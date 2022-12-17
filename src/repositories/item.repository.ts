@@ -27,6 +27,14 @@ class ItemRepository implements ItemRequestRepository {
       },
     })
   }
+
+  async detailsOrder(orderId: string): Promise<ItemDTO | null> {
+    return await prisma.item.findFirst({
+      where: {
+        orderId: orderId,
+      },
+    })
+  }
 }
 
 export default ItemRepository

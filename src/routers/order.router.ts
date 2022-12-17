@@ -10,5 +10,6 @@ router.delete('/orders/:id', loginMiddleware.auth, orderController.delete)
 router.post('/orders/add', loginMiddleware.auth, itemController.add)
 router.delete('/orders/item/:id', loginMiddleware.auth, itemController.remove)
 router.put('/orders/send/:id', loginMiddleware.auth, orderController.send)
+router.get('/orders/details/', loginMiddleware.auth, orderController.details)
 
 export default router

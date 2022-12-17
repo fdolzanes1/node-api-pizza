@@ -1,3 +1,5 @@
+import { ItemDTO } from './item.interface'
+
 export interface OrderData {
   table: number
   name: string
@@ -19,4 +21,5 @@ export interface OrderRequestRepository {
   delete(id: string): Promise<void>
   findById(id: string): Promise<OrderDTO | null>
   sendOrder(id: string): Promise<OrderDTO | null>
+  detailsOrder(orderId: string): Promise<ItemDTO | null>
 }

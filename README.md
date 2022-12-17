@@ -16,8 +16,8 @@ The goal of this project is to provide a modern and easy to use order management
 - [x] Open an order table and Close a table.
 - [x] Add items to a table and also remove items.
 - [x] List all orders.
-- [ ] Submit order and withdraw from draft.
-- [ ] Access all order details.
+- [x] Submit order and withdraw from draft.
+- [x] Access all order details.
 - [ ] Complete order.
 
 ## Requirements

@@ -4,6 +4,7 @@ import {
   OrderData,
   OrderRequestRepository,
 } from '../interfaces/order.interface'
+import { ItemDTO } from '../interfaces/item.interface'
 
 class OrderRepository implements OrderRequestRepository {
   async create(data: OrderData): Promise<void> {
@@ -13,7 +14,15 @@ class OrderRepository implements OrderRequestRepository {
   }
 
   async listAll(): Promise<OrderDTO[] | null | undefined> {
-    return await prisma.order.findMany()
+    return await prisma.order.findMany({
+      where: {
+        draft: false,
+        status: false,
+      },
+      orderBy: {
+        created_at: 'desc',
+      },
+    })
   }
 
   async delete(id: string): Promise<void> {
@@ -39,6 +48,18 @@ class OrderRepository implements OrderRequestRepository {
       },
       data: {
         draft: false,
+      },
+    })
+  }
+
+  async detailsOrder(orderId: string): Promise<ItemDTO | null> {
+    return await prisma.item.findFirst({
+      where: {
+        orderId: orderId,
+      },
+      include: {
+        Product: true,
+        Order: true,
       },
     })
   }

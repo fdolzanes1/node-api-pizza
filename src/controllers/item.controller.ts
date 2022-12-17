@@ -1,7 +1,9 @@
 import { Request, Response } from 'express'
 import { AddItem } from '../services/item/add-item.usecase'
 import { RemoveItem } from '../services/item/remove-item.usecase'
+import { DetailsOrder } from '../services/order/details-orders.usecase'
 import ItemRepository from '../repositories/item.repository'
+import OrderRepository from '../repositories/order.repository'
 class ItemController {
   static async add(req: Request, res: Response) {
     const { orderId, productId, amount } = req.body
