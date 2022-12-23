@@ -5,6 +5,7 @@ import { GetAllOrder } from '../services/order/get-all-order.usecase'
 import { DeleteOrder } from '../services/order/delete-order.usecase'
 import { SendOrder } from '../services/order/send-order.usecase'
 import { DetailsOrder } from '../services/order/details-orders.usecase'
+import { FinishOrder } from '../services/order/finish-order.usecase'
 class OrderController {
   static async create(req: Request, res: Response) {
     const { table, name } = req.body
@@ -62,6 +63,18 @@ class OrderController {
     const detailsOrder = new DetailsOrder(orderRepository)
     try {
       const result = await detailsOrder.execute(String(order_id))
+      return res.status(201).json({ order: result })
+    } catch (error: any) {
+      return res.status(500).json({ error: error.message })
+    }
+  }
+
+  static async finish(req: Request, res: Response) {
+    const order_id = req.params.id as string
+    const orderRepository = new OrderRepository()
+    const finishOrder = new FinishOrder(orderRepository)
+    try {
+      const result = await finishOrder.execute(String(order_id))
       return res.status(201).json({ order: result })
     } catch (error: any) {
       return res.status(500).json({ error: error.message })

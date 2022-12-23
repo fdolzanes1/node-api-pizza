@@ -63,6 +63,17 @@ class OrderRepository implements OrderRequestRepository {
       },
     })
   }
+
+  async finishOrder(orderId: string): Promise<OrderDTO | null> {
+    return await prisma.order.update({
+      where: {
+        id: orderId,
+      },
+      data: {
+        status: true,
+      },
+    })
+  }
 }
 
 export default OrderRepository

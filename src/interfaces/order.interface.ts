@@ -22,4 +22,5 @@ export interface OrderRequestRepository {
   findById(id: string): Promise<OrderDTO | null>
   sendOrder(id: string): Promise<OrderDTO | null>
   detailsOrder(orderId: string): Promise<ItemDTO | null>
+  finishOrder(orderId: string): Promise<OrderDTO | null>
 }

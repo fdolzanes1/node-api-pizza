@@ -18,7 +18,7 @@ The goal of this project is to provide a modern and easy to use order management
 - [x] List all orders.
 - [x] Submit order and withdraw from draft.
 - [x] Access all order details.
-- [ ] Complete order.
+- [x] Complete order.
 
 ## Requirements
 
